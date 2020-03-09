@@ -289,6 +289,8 @@ class HarmonyLauncher(SoftwareLauncher):
         )
         required_env["SGTK_HARMONY_STARTUP_TEMPLATE"] = xtage.replace("\\", "/")
 
+        self.logger.debug("args before modification: '%s'" % args)
+        
         args = " -debug"
         args += ' "' + xtage + '"'
 
